@@ -1,0 +1,106 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: rgb(26, 25, 25);
+  margin-top: 25px;
+}
+
+.sortButtons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6f2232;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+
+    &:hover {
+      background-color: #64485c;
+    }
+
+    &.activeButton {
+      background-color: #6f2232;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+    }
+  }
+}
+
+.list {
+  display: grid; /* Используем Grid */
+  grid-template-columns: repeat(4, 1fr); /* 3 колонки одинаковой ширины */
+  gap: 20px; /* Отступы между элементами */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+}
+
+.item {
+  background-color: #6f2232;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px; /* Фиксированная ширина элемента */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+
+
+
+  &:hover {
+    transform: translateY(-5px);
+    transform: scale(0.9);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  h3 {
+    font-family: 'Monserrat', to-upper-case($string: "");
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: white;
+  }
+
+  p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
+  }
+
+  .visitButton {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #2e1114;
+    border: #2e1114;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #64485c;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    }
+  }
+}
+
+.df {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

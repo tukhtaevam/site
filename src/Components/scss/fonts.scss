@@ -1,0 +1,10 @@
+
+$montserrat: ('medium', 500);
+
+@each $name, $value in $montserrat {
+  @font-face {
+    font-family: "Montserrat";
+    src: url(../../assets/fonts/Montserrat-VariableFont_wght.ttf);
+    font-weight: $value;
+  }
+}
